@@ -48,7 +48,21 @@
           ></button>
         </div>
         <div class="offcanvas-body">
-          <div></div>
+          <form action="">
+            <div class="mb-3">
+              <label for="itemNome" class="form-label">Nome do item</label>
+              <input type="text" class="form-control" id="itemNome" required />
+            </div>
+             <div class="mb-3">
+              <label for="itemLocal" class="form-label">Aonde foi encontrado</label>
+              <input type="text" class="form-control" id="itemLocal" required />
+            </div>
+            <div class="mb-3">
+              <label for="itemDescricao" class="form-label">Descrição</label>
+              <textarea class="form-control" id="itemDescricao" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+          </form>
         </div>
       </div>
     </header>
