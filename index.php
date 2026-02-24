@@ -50,10 +50,10 @@
   </header>
 
   <main class="row row-cols-1 row-cols-md-2 g-4 p-2">
-    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado", false) ?>
-    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado", false) ?>
-    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado", false) ?>
-    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado", false) ?>
+    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado") ?>
+    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado") ?>
+    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado") ?>
+    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado") ?>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

@@ -23,10 +23,10 @@
   </header>
 
   <main class="row row-cols-1 row-cols-md-2 g-4 p-2">
-    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado", true) ?>
-    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado", true) ?>
-    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado", true) ?>
-    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado", true) ?>
+    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado") ?>
+    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado") ?>
+    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado") ?>
+    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado") ?>
   </main>
 </body>
 
