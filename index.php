@@ -1,3 +1,6 @@
+<?php
+  require "card.php";
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -47,55 +50,12 @@
   </header>
 
   <main class="row row-cols-1 row-cols-md-2 g-4 p-2">
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Nome do item encontrado</h5>
-          <p class="card-text">
-            Descrição do item perdido que foi encontrado
-          </p>
-          <p class="card-text">Aonde foi encontrado</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Nome do item encontrado</h5>
-          <p class="card-text">
-            Descrição do item perdido que foi encontrado
-          </p>
-          <p class="card-text">Aonde foi encontrado</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Nome do item encontrado</h5>
-          <p class="card-text">
-            Descrição do item perdido que foi encontrado
-          </p>
-          <p class="card-text">Aonde foi encontrado</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Nome do item encontrado</h5>
-          <p class="card-text">
-            Descrição do item perdido que foi encontrado
-          </p>
-          <p class="card-text">Aonde foi encontrado</p>
-        </div>
-      </div>
-    </div>
+    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado") ?>
+    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado") ?>
+    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado") ?>
+    <?php renderCardItem("Nome do item perdido", "Descrição do item","Aonde foi encontrado") ?>
   </main>
 
-  <footer class="d-flex justify-content-center p-2 bg-success fixed-bottom">
-    <a class="btn btn-primary" href="index.html" role="button">Voltar ao Inicio</a>
-  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
