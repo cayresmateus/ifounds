@@ -13,8 +13,8 @@ function renderCardItem($nome, $descricao, $local,$isAdmin) {
   if ($isAdmin) {
     echo '
     <div class="mt-3">
-    <a href="" class="btn btn-success btn-sm">Editar</a>
-    <a href="" class="btn btn-success btn-sm">Deletar</a>
+    <a href="" class="btn btn-primary btn-sm">Editar</a>
+    <a href="" class="btn btn-danger btn-sm">Deletar</a>
     </div>
     ';
   }
