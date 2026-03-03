@@ -29,6 +29,17 @@ class ItemRepositorio{
         );
     }
 
+    public function insertItem(Item $item):void{
+        $sql = "INSERT INTO item (nome, descricao, localizacao) VALUES (:nome, :descricao, :localizacao)";
+        $statement = $this->pdo->prepare($sql);
+        $statement->bindValue(':nome', $item->getNome());
+        $statement->bindValue(':descricao', $item->getDescricao());
+        $statement->bindValue(':localizacao', $item->getLocalizacao());
+        $statement->execute();
+    }
+
+    
+
 }
 
 ?>
