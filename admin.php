@@ -1,14 +1,11 @@
 <?php
   $isAdmin = true;
   require "card.php";
-  
   require "src/conexaoDB.php";
-
-  $sql = "SELECT * FROM item ";
-
-  $statement = $pdo ->query($sql);
-
-  $items = $statement->fetchAll();
+  require "src/modelo/Item.php";
+  require "src/repositorio/ItemRepositorio.php";
+  $dadosItens = new ItemRepositorio($pdo);
+  $items = $dadosItens->selectItens();
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +31,7 @@
   <main class="row row-cols-1 row-cols-md-2 g-4 p-2">
     <?php 
       foreach($items as $item){
-        renderCardItem($item['nome'],$item['descricao'],$item['localizacao'],$isAdmin);
+        renderCardItem($item->getId(),$item->getNome(),$item->getDescricao(),$item->getLocalizacao(),$isAdmin);
       }
     ?>
     
