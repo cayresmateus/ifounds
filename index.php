@@ -1,7 +1,6 @@
 <?php
   $isAdmin = false;
-  
-
+  require "src/components/card.php";
   require "src/conexaoDB.php";
   require "src/modelo/Item.php";
   require "src/repositorio/ItemRepositorio.php";
