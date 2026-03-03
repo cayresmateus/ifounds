@@ -2,8 +2,8 @@
   $isAdmin = false;
   require "card.php";
   require "src/conexaoDB.php";
-  require "src/modelo/Livro.php";
-  require "src/repositorio/LivroRepositorio.php";
+  require "src/modelo/Item.php";
+  require "src/repositorio/ItemRepositorio.php";
   $dadosItens = new ItemRepositorio($pdo);
   $items = $dadosItens->selectItens();
 ?>
