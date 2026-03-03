@@ -1,6 +1,6 @@
 <?php
   $isAdmin = false;
-  require "card.php";
+  require "../IFounds/src/components/card.php";
 
   require "src/conexaoDB.php";
 
