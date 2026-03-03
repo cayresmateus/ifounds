@@ -1,15 +1,11 @@
 <?php
   $isAdmin = false;
-  require "card.php";
-
+  require "src/components/card.php";
   require "src/conexaoDB.php";
-
-  $sql = "SELECT * FROM item ";
-
-  $statement = $pdo ->query($sql);
-
-  $items = $statement->fetchAll();
-
+  require "src/modelo/Item.php";
+  require "src/repositorio/ItemRepositorio.php";
+  $dadosItens = new ItemRepositorio($pdo);
+  $items = $dadosItens->selectItens();
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -31,38 +27,13 @@
       Cadastrar
     </button>
 
-    <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
-      aria-labelledby="staticBackdropLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="staticBackdropLabel">
-          Cadastro de item
-        </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <form action="">
-          <div class="mb-3">
-            <label for="itemNome" class="form-label">Nome do item</label>
-            <input type="text" class="form-control" id="itemNome" required />
-          </div>
-          <div class="mb-3">
-            <label for="itemLocal" class="form-label">Aonde foi encontrado</label>
-            <input type="text" class="form-control" id="itemLocal" required />
-          </div>
-          <div class="mb-3">
-            <label for="itemDescricao" class="form-label">Descrição</label>
-            <textarea class="form-control" id="itemDescricao" rows="3" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </form>
-      </div>
-    </div>
+    <?php include '../IFounds/src/components/offcanvas.php'; ?>
   </header>
 
   <main class="row row-cols-1 row-cols-md-2 g-4 p-2">
     <?php
       foreach($items as $item){
-        renderCardItem($item['nome'],$item['descricao'],$item['localizacao'],$isAdmin);
+        renderCardItem($item->getId(),$item->getNome(),$item->getDescricao(),$item->getLocalizacao(),$isAdmin);
       }
     ?>
   </main>
