@@ -1,6 +1,7 @@
 <?php
   $isAdmin = true;
-  require "card.php";
+  
+  
   require "src/conexaoDB.php";
   require "src/modelo/Item.php";
   require "src/repositorio/ItemRepositorio.php";
