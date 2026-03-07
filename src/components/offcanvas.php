@@ -1,5 +1,6 @@
 <?php 
       require "src/conexaoDB.php";
+      $pgAtual=($isAdmin)? "admin.php" : "index.php";
 
       if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $nome = $_POST['nome'];
@@ -9,8 +10,8 @@
         $item = new Item(null, $nome, $descricao, $local);
         $itemRepositorio = new ItemRepositorio($pdo);
         $itemRepositorio->insertItem($item);
-        header("Location: index.php");
-        exit();
+        header("Location: $pgAtual");
+        exit(); 
       }
      
       
