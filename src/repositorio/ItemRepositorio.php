@@ -22,7 +22,7 @@ class ItemRepositorio{
 
     private function criarObjeto($dados){
         return new Item (
-            $dados['id']= null,
+            $dados['codigo'],
             $dados['nome'],
             $dados['descricao'],
             $dados['localizacao']
@@ -38,6 +38,12 @@ class ItemRepositorio{
         $statement->execute();
     }
 
+    public function deleteItem(int $id){
+        $sql = "DELETE FROM item WHERE codigo = ?";
+        $statement = $this->pdo->prepare($sql);
+        $statement->bindValue(1,$id);
+        $statement->execute();
+    }
     
 
 }

@@ -34,7 +34,7 @@
 
     <?php include '../IFounds/src/components/offcanvas.php'; ?>
 
-      <a class="btn btn-primary p-2 m-2" href="index.php" role="button">Sair Pagina Admin</a>
+      <a class="btn btn-danger p-2 m-2" href="index.php" role="button">Sair Pagina Admin</a>
     </div>
     
   </header>
