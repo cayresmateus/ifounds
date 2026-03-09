@@ -17,7 +17,7 @@ function renderCardItem($id,$nome, $descricao, $local,$isAdmin) {
     <div class="mt-3 d-flex gap-2 ">
       <form>
         <input type="hidden" name="id" value=" '.$id.' " >
-        <input type="submit" class="btn btn-primary btn-sm value="Editar" >
+        <input type="submit" class="btn btn-primary btn-sm" value="Editar" >
       </form>
       <form action="../deleteItem.php" method="post">
         <input type="hidden" name="id" value=" '.$id.' " >
