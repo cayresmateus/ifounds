@@ -1,6 +1,7 @@
 <?php
   $isAdmin = true;
   require "src/components/card.php";
+  require "src/components/modal.php";
   require "src/conexaoDB.php";
   require "src/modelo/Item.php";
   require "src/repositorio/ItemRepositorio.php";
@@ -47,6 +48,12 @@
     ?>
     
   </main>
+
+  <?php
+    foreach($items as $item){
+      renderEditModal($item);
+    }
+  ?>
   
 </body>
 
