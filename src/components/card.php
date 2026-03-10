@@ -15,10 +15,7 @@ function renderCardItem($id,$nome, $descricao, $local,$isAdmin) {
   if ($isAdmin) {
     echo '
     <div class="mt-3 d-flex gap-2 ">
-      <form>
-        <input type="hidden" name="id" value=" '.$id.' " >
-        <input type="submit" class="btn btn-primary btn-sm" value="Editar" >
-      </form>
+      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-' . $id . '">Editar</button>
       <form action="../deleteItem.php" method="post">
         <input type="hidden" name="id" value=" '.$id.' " >
         <input type="submit" class="btn btn-danger btn-sm" value="Deletar" >
