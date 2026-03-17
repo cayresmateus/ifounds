@@ -1,6 +1,7 @@
 <?php
   $isAdmin = true;
   require "src/components/card.php";
+  require "src/components/modal.php";
   require "src/conexaoDB.php";
   require "src/modelo/Item.php";
   require "src/repositorio/ItemRepositorio.php";
@@ -22,10 +23,21 @@
 
 <body>
   <header class="d-flex justify-content-between p-2 align-items-center bg-success">
-    <a class="titulo">
+    <a class="titulo" href="index.php">
       <img class="w-25 p-2" src="./img/Ifounds_logo.png" alt="Logo IFOUNDS"> <p> - Administração</p> 
     </a>
-    <a class="btn btn-primary" href="index.php" role="button">Sair Pagina Admin</a>
+    <div class="d-flex justify-content-between p-2 m-2">
+      
+    <button class="btn btn-primary p-2 m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+      aria-controls="staticBackdrop">
+      Cadastrar
+    </button>
+
+    <?php include '../IFounds/src/components/offcanvas.php'; ?>
+
+      <a class="btn btn-danger p-2 m-2" href="index.php" role="button">Sair Pagina Admin</a>
+    </div>
+    
   </header>
 
   <main class="row row-cols-1 row-cols-md-2 g-4 p-2">
@@ -36,9 +48,17 @@
     ?>
     
   </main>
+
+  <?php
+    foreach($items as $item){
+      renderEditModal($item);
+    }
+  ?>
   
 </body>
 
 </html>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>

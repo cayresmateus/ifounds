@@ -1,4 +1,6 @@
 <?php
+
+
 function renderCardItem($id,$nome, $descricao, $local,$isAdmin) {
   echo '
   <div class="col">
@@ -12,9 +14,12 @@ function renderCardItem($id,$nome, $descricao, $local,$isAdmin) {
   
   if ($isAdmin) {
     echo '
-    <div class="mt-3">
-    <a href="" class="btn btn-primary btn-sm">Editar</a>
-    <a href="" class="btn btn-danger btn-sm">Deletar</a>
+    <div class="mt-3 d-flex gap-2 ">
+      <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-' . $id . '">Editar</button>
+      <form action="src/service/deleteItem.php" method="post">
+        <input type="hidden" name="id" value=" '.$id.' " >
+        <input type="submit" class="btn btn-danger btn-sm" value="Deletar" >
+      </form>
     </div>
     ';
   }
@@ -24,4 +29,3 @@ function renderCardItem($id,$nome, $descricao, $local,$isAdmin) {
   </div>';
 }
 ?>
-
