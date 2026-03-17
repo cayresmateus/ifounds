@@ -1,24 +1,4 @@
-<?php 
-      require "src/conexaoDB.php";
-      $pgAtual=($isAdmin)? "admin.php" : "index.php";
-
-      if($_SERVER['REQUEST_METHOD'] === 'POST'){
-        $nome = $_POST['nome'];
-        $local = $_POST['local'];
-        $descricao = $_POST['descricao'];
-
-        $item = new Item(null, $nome, $descricao, $local);
-        $itemRepositorio = new ItemRepositorio($pdo);
-        $itemRepositorio->insertItem($item);
-        header("Location: $pgAtual");
-        exit(); 
-      }
-     
-      
-      
-  ?>
-    
-    <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+<div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
       aria-labelledby="staticBackdropLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="staticBackdropLabel">
@@ -27,7 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <form action="" method="post">
+        <form action="src/service/createItem.php" method="post">
           <div class="mb-3">
             <label for="itemNome" class="form-label">Nome do item</label>
             <input type="text" name="nome" class="form-control" id="itemNome" required />

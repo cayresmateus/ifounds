@@ -13,7 +13,7 @@ function renderEditModal($item) {
           <h1 class="modal-title fs-5" id="modalLabel-' . $id . '">Editar Item</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form action="updateItem.php" method="post">
+        <form action="src/service/updateItem.php" method="post">
           <div class="modal-body">
             <input type="hidden" name="id" value="' . $id . '">
             <div class="mb-3">

@@ -23,7 +23,7 @@
 
 <body>
   <header class="d-flex justify-content-between p-2 align-items-center bg-success">
-    <a class="titulo">
+    <a class="titulo" href="index.php">
       <img class="w-25 p-2" src="./img/Ifounds_logo.png" alt="Logo IFOUNDS"> <p> - Administração</p> 
     </a>
     <div class="d-flex justify-content-between p-2 m-2">

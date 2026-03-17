@@ -21,7 +21,7 @@
 
 <body>
   <header class="d-flex justify-content-between p-2 align-items-center bg-success">
-    <a class="titulo" href="/index.html"> <img class="w-25 p-2" src="img/Ifounds_logo.png" alt="Logo Ifounds">  <p>- O que queremos achar </p></a></a>
+    <a class="titulo" href="/"> <img class="w-25 p-2" src="img/Ifounds_logo.png" alt="Logo Ifounds">  <p>- O que queremos achar </p></a></a>
     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
       aria-controls="staticBackdrop">
       Cadastrar
