@@ -6,6 +6,6 @@ require __DIR__ . "/../modelo/Item.php";
 $itemRepositorios = new ItemRepositorio($pdo);
 $itemRepositorios->deleteItem($_POST['id']);
 
-header("Location: /admin.php");
+header("Location: /admin");
 
 ?>

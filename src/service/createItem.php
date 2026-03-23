@@ -6,10 +6,10 @@ require __DIR__ . "/../repositorio/ItemRepositorio.php";
 $isAdmin = false;
 if (isset($_SERVER['HTTP_REFERER'])) {
   $ref = $_SERVER['HTTP_REFERER'];
-  $isAdmin = str_contains($ref, '/admin.php');
+  $isAdmin = str_contains($ref, '/admin');
 }
 
-$pgAtual = $isAdmin ? '/admin.php' : '/index.php';
+$pgAtual = $isAdmin ? '/admin' : '/';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $nome = $_POST['nome'] ?? '';

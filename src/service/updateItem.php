@@ -13,5 +13,6 @@ $item = new Item($id, $nome, $descricao, $local);
 $itemRepositorios = new ItemRepositorio($pdo);
 $itemRepositorios->updateItem($item);
 
-header("Location: /admin.php");
+
+header("Location: /admin");
 ?>

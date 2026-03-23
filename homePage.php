@@ -16,18 +16,18 @@
   <title>IFounds</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 
 <body>
   <header class="d-flex justify-content-between p-2 align-items-center bg-success">
-    <a class="titulo" href="/"> <img class="w-25 p-2" src="img/Ifounds_logo.png" alt="Logo Ifounds">  <p>- O que queremos achar </p></a></a>
+    <a class="titulo" href="/"> <img class="w-25 p-2" src="img/Ifounds_logo.png" alt="Logo Ifounds"> <p id="titulo">- O que queremos achar</p>  </a></a>
     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
       aria-controls="staticBackdrop">
       Cadastrar
     </button>
 
-    <?php include '../IFounds/src/components/offcanvas.php'; ?>
+    <?php include 'src/components/offcanvas.php'; ?>
   </header>
 
   <main class="row row-cols-1 row-cols-md-2 g-4 p-2">
