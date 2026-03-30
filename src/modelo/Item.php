@@ -1,5 +1,5 @@
 <?php
-
+namespace ifounds\modelo;
 class Item{
     private ?int $id;
     private string $nome;

@@ -1,11 +1,13 @@
 <?php
-require __DIR__ . "/../repositorio/ItemRepositorio.php";
-require __DIR__ . "/../conexaoDB.php";
-require __DIR__ . "/../modelo/Item.php";
+require __DIR__ . "/../../vendor/autoload.php";
+use ifounds\repositorio\ItemRepositorio;
+use ifounds\ConexaoDB;
+
+$pdo = (new ConexaoDB())->conexao();
 
 $itemRepositorios = new ItemRepositorio($pdo);
 $itemRepositorios->deleteItem($_POST['id']);
 
-header("Location: /admin.php");
+header("Location: /admin");
 
 ?>

@@ -1,7 +1,10 @@
 <?php
-require __DIR__ . "/../repositorio/ItemRepositorio.php";
-require __DIR__ . "/../conexaoDB.php";
-require __DIR__ . "/../modelo/Item.php";
+require __DIR__ . "/../../vendor/autoload.php";
+use ifounds\repositorio\ItemRepositorio;
+use ifounds\ConexaoDB;
+use ifounds\modelo\Item;
+
+$pdo = (new ConexaoDB())->conexao();
 
 $id = $_POST['id'];
 $nome = $_POST['nome'];
@@ -13,5 +16,6 @@ $item = new Item($id, $nome, $descricao, $local);
 $itemRepositorios = new ItemRepositorio($pdo);
 $itemRepositorios->updateItem($item);
 
-header("Location: /admin.php");
+
+header("Location: /admin");
 ?>

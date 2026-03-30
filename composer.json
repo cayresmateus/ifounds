@@ -1,0 +1,19 @@
+{
+    "name": "web-3/ifounds",
+    "autoload": {
+        "psr-4": {
+            "ifounds\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mateus cayres",
+            "email": "mateuscayres3@gmail.com"
+        },
+        {
+            "name": "Lucadd Vinicius",
+            "email": "lucas@gmail.com"
+        }
+    ],
+    "require": {}
+}

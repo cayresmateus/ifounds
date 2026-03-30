@@ -1,15 +1,17 @@
 <?php
-require __DIR__ . "/../conexaoDB.php";
-require __DIR__ . "/../modelo/Item.php";
-require __DIR__ . "/../repositorio/ItemRepositorio.php";
+require __DIR__ . "/../../vendor/autoload.php";
+use ifounds\repositorio\ItemRepositorio;
+use ifounds\ConexaoDB;
+use ifounds\modelo\Item;
+$pdo = (new ConexaoDB())->conexao();
 
 $isAdmin = false;
 if (isset($_SERVER['HTTP_REFERER'])) {
   $ref = $_SERVER['HTTP_REFERER'];
-  $isAdmin = str_contains($ref, '/admin.php');
+  $isAdmin = str_contains($ref, '/admin');
 }
 
-$pgAtual = $isAdmin ? '/admin.php' : '/index.php';
+$pgAtual = $isAdmin ? '/admin' : '/';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $nome = $_POST['nome'] ?? '';

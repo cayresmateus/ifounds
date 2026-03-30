@@ -1,4 +1,7 @@
 <?php 
+namespace ifounds\repositorio;
+use ifounds\modelo\Item;
+use PDO;
 
 class ItemRepositorio{
   private PDO $pdo;
