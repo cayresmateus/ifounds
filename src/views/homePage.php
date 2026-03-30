@@ -21,7 +21,7 @@ use ifounds\components\Card;
       Cadastrar
     </button>
 
-    <?php include 'src/components/offcanvas.php'; ?>
+    <?php include __DIR__ . "/../components/offcanvas.php"; ?>
   </header>
 
   <main class="row row-cols-1 row-cols-md-2 g-4 p-2">

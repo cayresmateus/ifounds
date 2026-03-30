@@ -27,7 +27,7 @@ use ifounds\components\Modal;
       Cadastrar
     </button>
 
-    <?php include 'src/components/offcanvas.php'; ?>
+    <?php include __DIR__ . "/../components/offcanvas.php"; ?>
 
       <a class="btn btn-danger p-2 m-2" href="/" role="button">Sair Pagina Admin</a>
     </div>
