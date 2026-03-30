@@ -1,14 +1,5 @@
 <?php
-  $isAdmin = false;
-  require __DIR__ . "/vendor/autoload.php";
-  use ifounds\repositorio\ItemRepositorio;
-  use ifounds\ConexaoDB;
-  use ifounds\components\Card;
-  
-  $conexaoDB = new ConexaoDB();
-  $pdo = $conexaoDB->conexao();
-  $dadosItens = new ItemRepositorio($pdo);
-  $items = $dadosItens->selectItens();
+use ifounds\components\Card;
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -30,7 +21,7 @@
       Cadastrar
     </button>
 
-    <?php include 'src/components/offcanvas.php'; ?>
+    <?php include __DIR__ . "/../components/offcanvas.php"; ?>
   </header>
 
   <main class="row row-cols-1 row-cols-md-2 g-4 p-2">

@@ -1,14 +1,6 @@
 <?php
-  $isAdmin = true;
-  require __DIR__ . "/vendor/autoload.php";
-  use ifounds\repositorio\ItemRepositorio;
-  use ifounds\ConexaoDB;
-  use ifounds\components\Card;
-  use ifounds\components\Modal;
-  $conexaoDB = new ConexaoDB();
-  $pdo = $conexaoDB->conexao();
-  $dadosItens = new ItemRepositorio($pdo);
-  $items = $dadosItens->selectItens();
+use ifounds\components\Card;
+use ifounds\components\Modal;
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +27,7 @@
       Cadastrar
     </button>
 
-    <?php include 'src/components/offcanvas.php'; ?>
+    <?php include __DIR__ . "/../components/offcanvas.php"; ?>
 
       <a class="btn btn-danger p-2 m-2" href="/" role="button">Sair Pagina Admin</a>
     </div>
