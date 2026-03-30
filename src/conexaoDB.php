@@ -6,7 +6,7 @@ class ConexaoDB{
   private $host = "localhost";
   private $port = 5432;
   private $dbName = "IFounds";
-  private $password = "postgres";
+  private $password = "lades";
   private PDO $pdo;
 
   public function conexao(){

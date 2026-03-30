@@ -1,10 +1,13 @@
 <?php
   $isAdmin = true;
+  require __DIR__ . "/vendor/autoload.php";
+  use ifounds\repositorio\ItemRepositorio;
+  use ifounds\ConexaoDB;
+  
   require "src/components/card.php";
   require "src/components/modal.php";
-  require "src/conexaoDB.php";
-  require "src/modelo/Item.php";
-  require "src/repositorio/ItemRepositorio.php";
+  $conexaoDB = new ConexaoDB();
+  $pdo = $conexaoDB->conexao();
   $dadosItens = new ItemRepositorio($pdo);
   $items = $dadosItens->selectItens();
 ?>
