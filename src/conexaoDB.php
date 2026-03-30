@@ -1,5 +1,5 @@
 <?php 
-namespace ifounds\src;
+namespace ifounds;
 use PDO;
 
 class ConexaoDB{
