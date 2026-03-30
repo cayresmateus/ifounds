@@ -3,9 +3,8 @@
   require __DIR__ . "/vendor/autoload.php";
   use ifounds\repositorio\ItemRepositorio;
   use ifounds\ConexaoDB;
-  
-  require "src/components/card.php";
-  require "src/components/modal.php";
+  use ifounds\components\Card;
+  use ifounds\components\Modal;
   $conexaoDB = new ConexaoDB();
   $pdo = $conexaoDB->conexao();
   $dadosItens = new ItemRepositorio($pdo);
@@ -46,7 +45,8 @@
   <main class="row row-cols-1 row-cols-md-2 g-4 p-2">
     <?php 
       foreach($items as $item){
-        renderCardItem($item->getId(),$item->getNome(),$item->getDescricao(),$item->getLocalizacao(),$isAdmin);
+        $card = new Card($item->getId(), $item->getNome(), $item->getDescricao(), $item->getLocalizacao(), $isAdmin);
+        $card->render();
       }
     ?>
     
@@ -54,7 +54,8 @@
 
   <?php
     foreach($items as $item){
-      renderEditModal($item);
+      $modal = new Modal();
+      $modal->render($item);
     }
   ?>
   
