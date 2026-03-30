@@ -1,14 +1,5 @@
 <?php
-  $isAdmin = false;
-  require __DIR__ . "/vendor/autoload.php";
-  use ifounds\repositorio\ItemRepositorio;
-  use ifounds\ConexaoDB;
-  use ifounds\components\Card;
-  
-  $conexaoDB = new ConexaoDB();
-  $pdo = $conexaoDB->conexao();
-  $dadosItens = new ItemRepositorio($pdo);
-  $items = $dadosItens->selectItens();
+use ifounds\components\Card;
 ?>
 <!doctype html>
 <html lang="pt-br">
