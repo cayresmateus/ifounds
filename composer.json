@@ -1,8 +1,8 @@
 {
-    "name": "lades-mac-05/ifounds",
+    "name": "web-3/ifounds",
     "autoload": {
         "psr-4": {
-            "LadesMac05\\Ifounds\\": "src/"
+            "ifounds\\": "src/"
         }
     },
     "authors": [
