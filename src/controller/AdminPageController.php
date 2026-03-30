@@ -12,6 +12,6 @@ class AdminPageController {
     $itemRepositorio = new ItemRepositorio($pdo);
     $items = $itemRepositorio->selectItens();
 
-    include __DIR__ . "/../../admin.php";
+    include __DIR__ . "/../../src/views/admin.php";
   }
 }

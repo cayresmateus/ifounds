@@ -12,6 +12,6 @@ class HomePageController {
     $itemRepositorio = new ItemRepositorio($pdo);
     $items = $itemRepositorio->selectItens();
 
-    include __DIR__ . "/../../homePage.php";
+    include __DIR__ . "/../../src/views/homePage.php";
   }
 }
