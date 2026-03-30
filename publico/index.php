@@ -1,9 +1,12 @@
 <?php 
+require __DIR__ . "/../vendor/autoload.php";
+use ifounds\controller\HomePageController;
+use ifounds\controller\AdminPageController;
 
 if(!array_key_exists('REQUEST_URI', $_SERVER) || $_SERVER['REQUEST_URI'] == '/'){
-  require_once (__DIR__."/../homePage.php");
+  HomePageController::index();
 } else if($_SERVER['REQUEST_URI'] == '/admin'){
-  require_once (__DIR__."/../admin.php");
+  AdminPageController::index();
 }else if($_SERVER['REQUEST_URI'] == '/src/service/createItem.php'){
   require_once (__DIR__."/../src/service/createItem.php");
 }else if($_SERVER['REQUEST_URI'] == '/src/service/updateItem.php'){
