@@ -1,0 +1,19 @@
+{
+    "name": "lades-mac-05/ifounds",
+    "autoload": {
+        "psr-4": {
+            "LadesMac05\\Ifounds\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mateus cayres",
+            "email": "mateuscayres3@gmail.com"
+        },
+        {
+            "name": "Lucadd Vinicius",
+            "email": "lucas@gmail.com"
+        }
+    ],
+    "require": {}
+}
