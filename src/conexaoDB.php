@@ -5,7 +5,7 @@ use PDO;
 class ConexaoDB{
   private $host = "localhost";
   private $port = 5432;
-  private $dbName = "IFounds";
+  private $dbName = "ifounds";
   private $password = "postgres";
   private PDO $pdo;
 
