@@ -7,7 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <form action="src/service/createItem.php" method="post">
+        <form action="/criar" method="post">
           <div class="mb-3">
             <label for="itemNome" class="form-label">Nome do item</label>
             <input type="text" name="nome" class="form-control" id="itemNome" required />
